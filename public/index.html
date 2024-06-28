@@ -3,9 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Airbnb Clone</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .custom-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem; /* 32px */
+            height: 4rem; /* 32px */
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-100 font-sans">
+
     
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0">
+                    <img class="h-8 w-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_Bélo.svg/640px-Airbnb_Logo_Bélo.svg.png" alt="Airbnb Logo">
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#" class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Stays</a>
+                    <a href="#" class="text-gray-900 inline-flex items-center px-1 pt-1 text-sm font-medium">Experiences</a>
+                </div>
+                <div class="flex items-center">
+                    <a href="#" class="text-sm font-medium text-gray-700 mr-3">Airbnb your home</a>
+                    <div class="relative">
+                        <button class="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none p-1">
+                            <span class="sr-only">Open user menu</span>
+                            <div class="custom-icon">
+                                <i class="fas fa-user text-gray-700 fa-xl"></i>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Bar -->
+    <div class="bg-white py-4 shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-center space-x-4">
+                <input type="text" class="border border-gray-300 rounded-lg px-4 py-2 w-full max-w-md" placeholder="Where" />
+                <input type="text" class="border border-gray-300 rounded-lg px-4 py-2 w-full max-w-md" placeholder="Check in" />
+                <input type="text" class="border border-gray-300 rounded-lg px-4 py-2 w-full max-w-md" placeholder="Check out" />
+                <input type="text" class="border border-gray-300 rounded-lg px-4 py-2 w-full max-w-md" placeholder="Who" />
+                <button class="bg-red-500 text-white rounded-full p-2 ">
+                    <i class="fa-solid fa-magnifying-glass fa-lg" style="color: #ffffff;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="bg-white py-4 shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex overflow-x-auto space-x-4">
+                <a href="#" class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Icons</span>
+                </a>
+                <a href="#" class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Farms</span>
+                </a>
+                <a href="#" class="text-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Amazing views</span>
+                </a>
+                <!-- Add more categories as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <main class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <!-- Card -->
+            <div class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg">
+                <div class="relative w-full h-48 bg-gray-200 group-hover:opacity-75">
+                    <img class="w-full h-full object-cover" src="https://source.unsplash.com/1600x900/?hot-air-balloon" alt="Balloon">
+                    <span class="absolute top-2 left-2 bg-white text-black text-xs px-2 py-1 rounded">Live</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-gray-900">Drift off in the Up house</h3>
+                    <p class="text-sm text-gray-500">Hosted by Carl Fredricksen</p>
+                    <p class="text-sm text-gray-500">₹0 per guest</p>
+                </div>
+            </div>
+            <!-- Repeat the above block for more cards -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold">About</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="hover:underline">How Airbnb works</a></li>
+                        <li><a href="#" class="hover:underline">Newsroom</a></li>
+                        <li><a href="#" class="hover:underline">Investors</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold">Community</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="hover:underline">Diversity & Belonging</a></li>
+                        <li><a href="#" class="hover:underline">Accessibility</a></li>
+                        <li><a href="#" class="hover:underline">Airbnb Associates</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold">Host</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="hover:underline">Host your home</a></li>
+                        <li><a href="#" class="hover:underline">Host an Online Experience</a></li>
+                        <li><a href="#" class="hover:underline">Host an Experience</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold">Support</h3>
+                    <ul class="mt-4 space-y-4">
+                        <li><a href="#" class="hover:underline">Our COVID-19 Response</a></li>
+                        <li><a href="#" class="hover:underline">Help Center</a></li>
+                        <li><a href="#" class="hover:underline">Cancellation options</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 border-t border-gray-700 pt-8 text-center">
+                <p class="text-base">&copy; 2024 Airbnb, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
